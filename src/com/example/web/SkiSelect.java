@@ -29,6 +29,10 @@ public class SkiSelect extends HttpServlet {
 
     List result = ce.getLevels(c);
 
+    // The results will be passed back (as an attribute) to the JSP view
+    // The attribute will be a name/value pair, the value in this case will be a List object 
+    request.setAttribute("styles", result);
+    RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+    view.forward(request, response);
   }
-    
 }
