@@ -8,7 +8,7 @@
 
 <html>
 <body>
-<h1 align="center">Ski Equipment Recommandation JSP View</h1>
+<h1 align="center">Ski Equipment Recommandation</h1>
 <p>
 
 <%
