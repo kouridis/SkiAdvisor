@@ -7,17 +7,22 @@
 <%@ page import="java.util.*" %>
 
 <html>
+<link href="style.css" rel="stylesheet" type="text/css">
 <body>
-<h1 align="center">Ski Equipment Recommendation</h1>
-<p>
-
-<%
-  List styles = (List) request.getAttribute("styles");
-  Iterator it = styles.iterator();
-  while(it.hasNext()) {
-    out.print("<br>try: " + it.next());
-  }
-%>
-
+    <div align="center">
+        <div class="result">
+            <h1 align="center">Ski Equipment Recommendations</h1>
+                <%
+                  List styles = (List) request.getAttribute("styles");
+                  String level = (String) request.getAttribute("level");
+                  out.print("For a/an " + level + ":");
+                  out.print("<br/>");
+                  Iterator it = styles.iterator();
+                  while(it.hasNext()) {
+                    out.print("<br>o " + it.next());
+                  }
+                %>
+        </div>
+    </div>
 </body>
 </html>

@@ -12,19 +12,19 @@ public class SkiExpert {
         List levels = new ArrayList();
 
         if (level.equals("beginner")) {
-            levels.add("soft flex");
-            levels.add("foam or soft wood cores");
-            levels.add("capped constructions");
+            levels.add("Soft flex");
+            levels.add("Foam or soft wood cores");
+            levels.add("Capped constructions");
         }
         else if (level.equals("intermediate")) {
-            levels.add("medium or stiff flex");
-            levels.add("strong wood cores");
-            levels.add("sandwich sidewall construction");
+            levels.add("Medium or stiff flex");
+            levels.add("Strong wood cores");
+            levels.add("Sandwich sidewall construction");
         }
         else if (level.equals("experienced")) {
-            levels.add("stiff or very stiff flex");
-            levels.add("very strong wood cores");
-            levels.add("sandwich sidewall construction");
+            levels.add("Stiff or very stiff flex");
+            levels.add("Very strong wood cores");
+            levels.add("Sandwich sidewall construction");
         }
         return(levels);
     }
