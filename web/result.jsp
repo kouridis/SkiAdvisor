@@ -8,7 +8,7 @@
 
 <html>
 <body>
-<h1 align="center">Ski Equipment Recommandation</h1>
+<h1 align="center">Ski Equipment Recommendation</h1>
 <p>
 
 <%

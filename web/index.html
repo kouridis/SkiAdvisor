@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
+<link href="style.css" rel="stylesheet" type="text/css">
 <title>Ski Equipment Advisor</title>
 <body>
-  <h1 align="center">Ski Equipment Advisor</h1>
-  <form method="POST" action="SelectSki.do">
-    Select Level:
-    <select name="level">
-      <option value="beginner">Beginner</option>
-      <option value="intermediate">Intermediate</option>
-      <option value="experienced">Experienced</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Submit">
-   </form>
+    <div align="center">
+        <div class="form">
+            <h1 align="center">Ski Equipment Advisor</h1>
+            <form  method="POST" action="SelectSki.do">
+                <label for="level">Select Level</label>
+                <select id="level" name="level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="experienced">Experienced</option>
+                </select> 
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
