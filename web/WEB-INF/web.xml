@@ -8,10 +8,34 @@
     <servlet-name>Ski</servlet-name>
     <servlet-class>com.example.web.SkiSelect</servlet-class>
   </servlet>
-
+  
   <servlet-mapping>
     <servlet-name>Ski</servlet-name>
     <url-pattern>/SelectSki.do</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.example.web.Login</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.example.web.Logout</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout.do</url-pattern>
+  </servlet-mapping>
+  
+<listener>
+    <listener-class>com.example.web.SessionCountListener</listener-class>
+</listener>
 
 </web-app>
