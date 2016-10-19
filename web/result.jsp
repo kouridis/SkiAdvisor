@@ -9,6 +9,11 @@
 <html>
 <link href="style.css" rel="stylesheet" type="text/css">
 <body>
+    <ul>
+        <li><a href="/SkiAdvisor">Home</a></li>
+        <li style="float:right"><a class="active" href="/SkiAdvisor/login">Login</a></li>
+    </ul>
+    <br><br>
     <div align="center">
         <div class="result">
             <h1 align="center">Ski Equipment Recommendations</h1>
