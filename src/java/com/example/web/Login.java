@@ -15,17 +15,24 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.util.*;
+import com.uthldap.Uthldap;
 
 public class Login extends HttpServlet {
-    protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
  
-    protected void doPost(HttpServletRequest request,
-                    HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
+        Uthldap ldap = new Uthldap(username,password);
+
+        if(ldap.auth()){
+            System.out.println("Autheticated Youre name is:" + ldap.getName());
+        }
+        else{
+            System.out.println("Authetication failed");
+        }
     }
     
 }
