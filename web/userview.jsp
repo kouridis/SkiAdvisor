@@ -12,11 +12,13 @@
 <body>
     <ul>
         <li><a href="/SkiAdvisor">Home</a></li>
-        <li><%
+        
+        <li style="float:right"><form method="POST" action="Logout.do">
+                                <input type="submit" value="Logout"/></form></li>
+        <li style="float:right"><a href=""><%
               String username = (String) request.getAttribute("username");
               out.print(username);
-              %></li>
-        <li style="float:right"><a class="active" href="login.html">Login</a></li>
+        %></a></li>
     </ul>
     <br><br>
     <div align="center">

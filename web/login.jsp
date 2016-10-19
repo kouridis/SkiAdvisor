@@ -1,3 +1,10 @@
+<%-- 
+    Document   : login
+    Created on : Oct 20, 2016, 12:59:44 AM
+    Author     : kouridis
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <link href="style.css" rel="stylesheet" type="text/css">
@@ -23,3 +30,4 @@
     </div>
 </body>
 </html>
+

@@ -26,16 +26,20 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
 
         Uthldap ldap = new Uthldap(username,password);
-
+        HttpSession session = null;
+        RequestDispatcher view = null;
+        
         if(ldap.auth()){
             System.out.println("Autheticated Youre name is:" + ldap.getName());
+            session = request.getSession();
             request.setAttribute("username", username);
-            RequestDispatcher view = request.getRequestDispatcher("userview.jsp");
-            view.forward(request, response);
+            session.setAttribute("username", username);
+            view = request.getRequestDispatcher("userview.jsp");
         }
         else{
             System.out.println("Authetication failed");
         }
+        view.forward(request, response);
         
     }
     

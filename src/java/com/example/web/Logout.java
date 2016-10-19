@@ -21,10 +21,10 @@ public class Logout extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 	}
  
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		session.invalidate();
-	}
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        RequestDispatcher view = request.getRequestDispatcher("index.html");
+    }
     
 }
