@@ -29,10 +29,14 @@ public class Login extends HttpServlet {
 
         if(ldap.auth()){
             System.out.println("Autheticated Youre name is:" + ldap.getName());
+            request.setAttribute("username", username);
+            RequestDispatcher view = request.getRequestDispatcher("userview.jsp");
+            view.forward(request, response);
         }
         else{
             System.out.println("Authetication failed");
         }
+        
     }
     
 }

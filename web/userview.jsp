@@ -1,3 +1,10 @@
+<%-- 
+    Document   : userview
+    Created on : Oct 20, 2016, 12:33:14 AM
+    Author     : kouridis
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <link href="style.css" rel="stylesheet" type="text/css">
@@ -5,6 +12,10 @@
 <body>
     <ul>
         <li><a href="/SkiAdvisor">Home</a></li>
+        <li><%
+              String username = (String) request.getAttribute("username");
+              out.print(username);
+              %></li>
         <li style="float:right"><a class="active" href="login.html">Login</a></li>
     </ul>
     <br><br>
