@@ -12,7 +12,7 @@
 <body>
     <ul>
         <li><a href="/SkiAdvisor">Home</a></li>
-        <li style="float:right"><a class="active" href="login.html">Login</a></li>
+        <li style="float:right"><a class="active" href="login.jsp">Login</a></li>
     </ul>
     <br><br>
     <div align="center">
@@ -25,6 +25,11 @@
                 <label><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
                 <button type="submit">Login</button>
+                <%
+                String failure = (String) request.getAttribute("failure");
+                if (failure != null) { %>
+                    <font color="red">Login failed</font>
+                <% } else {}%>
             </form>
         </div>
     </div>

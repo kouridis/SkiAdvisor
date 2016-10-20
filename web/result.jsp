@@ -11,7 +11,7 @@
 <body>
     <ul>
         <li><a href="/SkiAdvisor">Home</a></li>
-        <li style="float:right"><a class="active" href="/SkiAdvisor/login">Login</a></li>
+        <li style="float:right"><a class="active" href="login.jsp">Login</a></li>
     </ul>
     <br><br>
     <div align="center">

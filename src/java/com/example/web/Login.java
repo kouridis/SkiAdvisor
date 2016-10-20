@@ -38,6 +38,9 @@ public class Login extends HttpServlet {
         }
         else{
             System.out.println("Authetication failed");
+            request.setAttribute("failure", "Login failed");
+            request.setAttribute("fail", "1");
+            view = request.getRequestDispatcher("login.jsp");
         }
         view.forward(request, response);
         
