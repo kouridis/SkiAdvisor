@@ -28,9 +28,15 @@ public class SkiSelect extends HttpServlet {
     SkiExpert ce = new SkiExpert();
 
     List result = ce.getLevels(c);
-
-    // The results will be passed back (as an attribute) to the JSP view
-    // The attribute will be a name/value pair, the value in this case will be a List object 
+    
+    String username = null;
+    HttpSession session = request.getSession();
+    
+    if (session != null) {
+        username = (String) session.getAttribute("username");
+    }
+    
+    request.setAttribute("username", username);
     request.setAttribute("styles", result);
     request.setAttribute("level", c);
     RequestDispatcher view = request.getRequestDispatcher("result.jsp");

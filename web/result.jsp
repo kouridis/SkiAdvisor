@@ -11,7 +11,14 @@
 <body>
     <ul>
         <li><a href="/SkiAdvisor">Home</a></li>
-        <li style="float:right"><a class="active" href="login.jsp">Login</a></li>
+        <%String username = (String) request.getAttribute("username");
+        if (username != null) { %>
+            <li style="float:right"><form method="POST" action="Logout.do">
+                                    <input type="submit" value="Logout"/></form></li>
+            <li style="float:right"><a href=""><%out.print(username);%></a></li>
+        <%} else { %>
+            <li style="float:right"><a class="active" href="login.jsp">Login</a></li>
+        <%}%>
     </ul>
     <br><br>
     <div align="center">
